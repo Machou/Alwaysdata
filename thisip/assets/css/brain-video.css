@@ -1,0 +1,465 @@
+:root {
+	--couleur-brain: rgba(214, 104, 83, 1);
+}
+
+body {
+	background-color: rgba(17,21,28, 1) !important;
+	color: var(--couleur-brain) !important;
+	font-family: Arial, Verdana, Tahoma, sans-serif !important;
+	font-size: .9rem !important;
+}
+
+.container, .container-fluid, .row	{ --bs-gutter-x: 1rem !important; }
+a									{ color: var(--couleur-brain); text-decoration: none !important; }
+a:hover								{ color: var(--couleur-brain); opacity: .75 !important; }
+li									{ display: flex !important; list-style: none !important; }
+nav a, nav a:hover					{ color: var(--couleur-brain) !important; text-underline-offset: .375rem !important; }
+.nav-item							{ margin-right: 1rem !important; }
+.navbar								{ background-color: rgba(17,21,28, 1) !important; border-color: var(--couleur-brain) !important; border: 1px solid !important; border-top: 0 !important; }
+.navbar-toggler-icon				{ filter: brightness(0) saturate(100%) invert(66%) sepia(37%) saturate(3422%) hue-rotate(320deg) brightness(85%) contrast(96%); }
+.navbar-toggler:focus				{ box-shadow: none; }
+.lire-la-suite						{ text-decoration-line: underline; }
+.synopsis							{ font-size: .9rem; }
+.exclusivites:hover					{ opacity: .75; }
+.dropdown-menu.scroll				{ max-height: 450px; overflow-y: auto; }
+.list-group li						{ margin-bottom: .5rem; }
+.list-group li > div:first-child	{ min-width: 125px; }
+.nav-link							{ margin: auto; }
+.badge-ygg							{ background-color: rgba(45,174,135, 1); font-size: .85rem; }
+.badge-abn							{ background-color: rgba(73,86,110, 1); font-size: .85rem; }
+.badge-seedboxio					{ background-color: rgba(58,113,191, 1); font-size: .85rem; }
+.badge-ygg:hover,
+.badge-abn:hover,
+.badge-seedboxio:hover				{ color: rgba(255,255,255, .85); font-size: .85rem; }
+
+.images-liste {
+	display: flex !important;
+	flex-wrap: wrap !important;
+	gap: .75rem !important;
+	justify-content: center !important;
+}
+
+.images-liste img {
+	height: 80px;
+	width: 120px;
+}
+
+.svg-lien {
+	background: transparent;
+	display: inline-block;
+	fill: currentColor;
+	height: 20px;
+	padding: 0;
+}
+
+.svg-lien:hover		{ opacity: .75 !important; }
+
+.logo-carre {
+	border-radius: var(--bs-border-radius) !important;
+	height: 40px;
+	width: 40px;
+}
+
+.backdrop {
+	border-radius: var(--bs-border-radius) !important;
+	padding: 3rem;
+	font-weight: bold;
+	text-align: center;
+}
+
+.bg-backdrop {
+	--bs-bg-opacity: 1;
+	--bs-text-opacity: 1;
+	background-color: rgba(214,104,83, .75);
+	border-radius: var(--bs-border-radius) !important;
+	color: rgba(var(--bs-white-rgb), var(--bs-text-opacity));
+	display: inline-table;
+	font-size: 1rem;
+	padding: .5rem;
+	text-decoration: underline;
+}
+
+.bg-backdrop-recommandes-similaires {
+	--bs-bg-opacity: 1;
+	--bs-text-opacity: 1;
+	background-color: rgba(var(--bs-success-rgb), .75) !important;
+	border-radius: var(--bs-border-radius) !important;
+	color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
+	display: inline-table;
+	font-size: 1rem;
+	padding: .5rem;
+	text-decoration: underline;
+}
+
+/* Fiche d’un artiste */
+
+.details-artiste		{ cursor: pointer; }
+.details-artiste:hover	{ opacity: .75; }
+
+/* Les Saisons & Épisodes */
+
+.alias::before								{ content: "— "; }
+.backdrop > div:first-child					{ background: linear-gradient(0deg, rgba(214,104,83, .5), rgba(214,104,83, .5) 30%, transparent 0, transparent); }
+.dropdown-hover-all .dropdown-menu			{ margin-left: -1px !important; }
+.dropdown-hover > .dropdown-menu.dropend 	{ margin-left: -1px !important; }
+.accordion-item								{ background-color: transparent; border: none; }
+
+.numero-episode {
+	border-radius: var(--bs-border-radius);
+	display: inline-block;
+	padding: 0 .4rem;
+	white-space: nowrap;
+}
+
+.titre-episode {
+	flex: 1 1 0;
+	min-width: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.accordion-button							{ display: flex; align-items: center; background-color: transparent; border: 1px solid var(--couleur-brain); color: var(--couleur-brain); padding: var(--bs-accordion-btn-padding-y) .75rem; }
+.accordion-button:not(.collapsed)			{ background-color: transparent; color: var(--couleur-brain); box-shadow: none; }
+.accordion-button::after					{ background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23d66853'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important; }
+.accordion-button:not(.collapsed)::after	{ transform: rotate(-90deg) !important; }
+.accordion-button:focus						{ box-shadow: none; border-color: var(--couleur-brain); }
+.accordion-item:first-of-type > .accordion-header .accordion-button				{ border-top-left-radius: 0; border-top-right-radius: 0; }
+.accordion-item:last-of-type > .accordion-header .accordion-button.collapsed	{ border-bottom-right-radius: 0; border-bottom-left-radius: 0; }
+.saison										{ position: relative; overflow: hidden; }
+.saison h3, .saison p						{ position: relative; z-index: 2; }
+
+.saison:before {
+	content: " ";
+	display: block;
+	left: 0;
+	opacity: .1;
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+}
+
+.episode		{ position: relative; overflow: hidden; }
+.episode span,
+.episode p,
+.episode .infos	{ position: relative; z-index: 2; }
+
+.episode:before {
+	content: " ";
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	opacity: .1;
+}
+
+/* Poster / Images */
+
+.img-fiche {
+	display: none;
+}
+
+.img-fiche-artiste {
+	border-radius: var(--bs-border-radius);
+	display: flex; flex-shrink: 0;
+	margin: auto !important;
+	-o-object-fit: cover;
+	object-fit: cover;
+	height: 380px;
+	width: 255px;
+}
+
+.img-profil-distribution {
+	border-radius: var(--bs-border-radius) !important;
+	border-bottom-left-radius: 0 !important;
+	border-bottom-right-radius: 0 !important;
+	height: 260px;
+	width: 100%;
+}
+
+.img-recherche-film-serie {
+	height: 190px !important;
+	width: 125px !important;
+}
+
+.img-recherche-artiste {
+	height: 100px !important;
+	width: 100px !important;
+}
+
+/* Divers */
+
+.cadre-films-series {
+	margin: auto;
+	padding: 0;
+	width: 200px;
+}
+
+.cadre-films-series > div {
+	border-top-left-radius: var(--bs-border-radius) !important;
+	border-top-right-radius: var(--bs-border-radius) !important;
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	padding: 0 0 .5rem 0;
+	transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+	width: 200px;
+}
+
+.cadre-films-series:hover,
+.cadre-films-series-connupour:hover {
+	border-top-left-radius: var(--bs-border-radius) !important;
+	border-top-right-radius: var(--bs-border-radius) !important;
+	background: rgba(255,255,255, .05);
+	box-shadow: 0 0 0 1px rgba(255, 255, 255, .2), 0 14px 40px rgba(0,0,0, .8);
+	transform: translateY(-2px);
+}
+
+.cadre-films-series img {
+	border-top-left-radius: var(--bs-border-radius) !important;
+	border-top-right-radius: var(--bs-border-radius) !important;
+	height: 300px;
+	width: 200px;
+}
+
+.cadre-films-series-connupour {
+	margin: auto;
+	padding: 0;
+	width: 150px;
+}
+
+.cadre-films-series-connupour > div {
+	border-top-left-radius: var(--bs-border-radius) !important;
+	border-top-right-radius: var(--bs-border-radius) !important;
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	padding: 0 0 .5rem 0;
+	transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+	width: 150px;
+}
+
+.cadre-films-series-connupour img {
+	border-top-left-radius: var(--bs-border-radius) !important;
+	border-top-right-radius: var(--bs-border-radius) !important;
+	height: 225px;
+	width: 150px;
+}
+
+@media (min-width: 576px) {
+	.cadre-films-series,
+	.cadre-films-series > div {
+		height: 380px;
+		width: 220px;
+	}
+
+	.cadre-films-series img {
+		width: 220px;
+	}
+
+	.cadre-films-series-connupour,
+	.cadre-films-series-connupour > div {
+		height: 360px;
+		width: 180px;
+	}
+
+	.cadre-films-series-connupour img {
+		height: 250px;
+		width: 185px;
+	}
+}
+
+.cadre-seedbox {
+	display: flex;
+	flex-wrap: wrap;
+	gap: .5rem;
+}
+
+.cadre-seedbox:not(:last-child)::after {
+	content: "|";
+	color: var(--couleur-brain) !important;
+	font-size: 1.5rem;
+}
+
+.recherche h2					{ -webkit-box-orient: vertical; -webkit-line-clamp: 1; display: -webkit-box; margin: 0 0 .5rem 0; overflow: hidden; }
+.recherche-synopsis				{ -webkit-box-orient: vertical; -webkit-line-clamp: 5; display: -webkit-box; font-size: .75rem; text-overflow: ellipsis; overflow: hidden; }
+
+.titre-populaires				{ max-width: 150px; }
+.carousel-caption				{ margin-bottom: 0; }
+.carousel-control-prev:hover	{ background-color: var(--bs-green); border-top-left-radius: var(--bs-border-radius); border-bottom-left-radius: var(--bs-border-radius); opacity: .5; }
+.carousel-control-next:hover	{ background-color: var(--bs-green); border-top-right-radius: var(--bs-border-radius); border-bottom-right-radius: var(--bs-border-radius); opacity: .5; }
+
+h1								{ color: var(--couleur-brain); margin: 1rem auto 2rem; text-align: center; }
+h2								{ font-size: 1rem; margin: 0; }
+.curseur						{ cursor: pointer; }
+.border-bv						{ border-color: var(--couleur-brain) !important; }
+.border-top, .border-bottom 	{ border-color: var(--couleur-brain) !important; }
+.border-c						{ border-left: var(--couleur-brain) 5px solid !important; }
+
+.dropdown-item.active,
+.dropdown-item:active			{ color: var(--bs-dropdown-link-active-color); }
+.dropdown-item					{ color: rgba(17,21,28, 1); font-size: .75rem; }
+
+#social a						{ color: rgba(255,255,255, 1) !important; font-size: 1.5rem !important; }
+.pagination						{ --bs-pagination-border-color: var(--couleur-brain) !important; }
+nav > ul > li > a.page-link		{ color: var(--couleur-brain) !important; }
+nav > ul > li.active			{ font-weight: bold !important; text-decoration: underline !important; }
+
+.active > .page-link,
+.page-link.active				{ color: rgba(51,51,51, 1); background-color: rgba(255,255,255, 1); border: 1px solid var(--couleur-brain); }
+.page-link						{ color: var(--couleur-brain); background-color: rgba(255,255,255, 1); border: 1px solid var(--couleur-brain); }
+.page-link:hover				{ background-color: var(--couleur-brain); border-color: var(--couleur-brain); color: rgba(255,255,255, 1) !important; }
+.page-link:focus				{ box-shadow: 0px 0 4px 1px var(--couleur-brain); }
+
+.ancre							{ background-color: rgba(17,21,28, 1); color: var(--couleur-brain); border-radius: var(--bs-border-radius) !important; }
+.ancre:hover, .ancre:focus		{ color: rgba(255,255,255, 1); transition: all 1.5s ease; }
+
+.liner {
+	display: flex !important;
+	align-items: flex-start !important;
+	text-align: left !important;
+}
+
+.liner:after {
+	background: var(--couleur-brain);
+	content: "";
+	flex-grow: 1;
+	height: 1px;
+	margin: auto .6rem;
+	min-width: 20px;
+}
+
+@media (pointer: fine) {
+	.dropdown-hover:hover .dropdown-menu {
+		display: block;
+		margin-top: 0;
+	}
+
+	.dropdown-hover > .dropdown:hover > .dropdown-toggle {
+		aria-expanded: true;
+	}
+}
+
+.form-control:focus			{ border-color: transparent; box-shadow: none; }
+.btn-accordion				{ color: var(--couleur-brain); font-size: 1.25rem; padding: 0;}
+.btn-copie					{ vertical-align: baseline; }
+.btn-copie:active			{ border: none; }
+.bg-brain					{ background-color: var(--couleur-brain) !important; }
+.bg-brain:hover				{ background-color: var(--couleur-brain) !important; opacity: .75 !important; }
+.text-bg-brain				{ color: rgba(255,255,255, 1) !important; background-color: var(--couleur-brain) !important; }
+.btn-brain-light			{ --bs-btn-color: rgba(255,255,255, 1) !important; }
+.btn-outline-brain-light	{ --bs-btn-hover-color: rgba(255,255,255, 1) !important; --bs-btn-active-color: rgba(255,255,255, 1) !important; }
+.btn:focus-visible			{ box-shadow: none; }
+
+.btn-brain {
+	--bs-btn-color: rgba(51,51,51, 1);
+	/* --bs-btn-color: rgba(255,255,255, 1); */
+	--bs-btn-bg: var(--couleur-brain);
+	--bs-btn-border-color: var(--couleur-brain);
+	--bs-btn-hover-color: rgba(51,51,51, 1);
+	--bs-btn-hover-bg: var(--couleur-brain);
+	--bs-btn-hover-border-color: var(--couleur-brain);
+	--bs-btn-focus-shadow-rgb: 60,153,110;
+	--bs-btn-active-color: rgba(51,51,51, 1);
+	--bs-btn-active-bg: var(--couleur-brain);
+	--bs-btn-active-border-color: var(--couleur-brain);
+	--bs-btn-active-shadow: inset 0 3px 5px rgba(0,0,0, .125);
+	--bs-btn-disabled-color: rgba(51,51,51, 1);
+	--bs-btn-disabled-bg: var(--couleur-brain);
+	--bs-btn-disabled-border-color: var(--couleur-brain);
+}
+
+.btn-outline-brain {
+	--bs-btn-color: var(--couleur-brain);
+	--bs-btn-border-color: var(--couleur-brain);
+	--bs-btn-hover-color: rgba(51,51,51, 1);
+	--bs-btn-hover-bg: var(--couleur-brain);
+	--bs-btn-hover-border-color: var(--couleur-brain);
+	--bs-btn-focus-shadow-rgb: 25,135,84;
+	--bs-btn-active-color: rgba(51,51,51, 1);
+	--bs-btn-active-bg: var(--couleur-brain);
+	--bs-btn-active-border-color: var(--couleur-brain);
+	--bs-btn-active-shadow: inset 0 3px 5px rgba(0,0,0, .125);
+	--bs-btn-disabled-color: var(--couleur-brain);
+	--bs-btn-disabled-bg: transparent;
+	--bs-btn-disabled-border-color: var(--couleur-brain);
+	--bs-gradient: none;
+}
+
+.tooltip {
+	--bs-tooltip-max-width: 350px;
+	--bs-tooltip-border-color: rgba(255,255,255, 1);
+	--bs-tooltip-padding-x: .5rem;
+	--bs-tooltip-padding-y: .5rem;
+	--bs-arrow-color: rgba(255,255,255, 1);
+	--bs-tooltip-border-radius: var(--bs-border-radius) !important;
+	--bs-tooltip-bg: rgba(255,255,255, 1);
+	--bs-tooltip-color: rgba(0,0,0, 1);
+}
+
+#motsCles ul {
+	display: flex !important;
+	flex-wrap: wrap !important;
+	gap: .5rem !important;
+	justify-content: center !important;
+	padding: 0 !important;
+}
+
+#motsCles > a {
+	background-color: rgba(17,21,28, 1);
+	border-radius: .375rem;;
+	border: 1px solid var(--couleur-brain);
+	color: var(--couleur-brain);
+	font-size: .85rem;
+	padding: .25rem .5rem;
+}
+
+#lien-note-le-imdb a				{ border: 1px solid rgba(245,197,24, 1); color: rgba(245,197,24, 1); }
+#lien-note-le-allocine a			{ border: 1px solid rgba(254,204,0, 1); color: rgba(254,204,0, 1); }
+#lien-note-le-betaseries a			{ border: 1px solid rgba(59,141,208, 1); color: rgba(59,141,208, 1); }
+#lien-note-le-criticker a			{ border: 1px solid rgba(204,77,77, 1); color: rgba(204,77,77, 1); }
+#lien-note-le-senscritique a		{ border: 1px solid rgba(255,255,255, 1); color: rgba(255,255,255, 1); }
+#lien-note-le-trakttv a				{ border: 1px solid rgba(130,49,164, 1); color: rgba(130,49,164, 1); }
+#lien-note-le-tvtime a				{ border: 1px solid rgba(255,212,0, 1); color: rgba(255,212,0, 1); }
+
+#lien-note-le-imdb a:hover			{ background-color: rgba(245,197,24, 1); color: rgba(255,255,255, 1); opacity: 1 !important; }
+#lien-note-le-allocine a:hover		{ background-color: rgba(254,204,0, 1); color: rgba(255,255,255, 1); opacity: 1 !important; }
+#lien-note-le-betaseries a:hover	{ background-color: rgba(59,141,208, 1); color: rgba(255,255,255, 1); opacity: 1 !important; }
+#lien-note-le-criticker a:hover		{ background-color: rgba(204,77,77, 1); color: rgba(255,255,255, 1); opacity: 1 !important; }
+#lien-note-le-senscritique a:hover	{ background-color: rgba(255,255,255, 1); color: rgba(0,0,0, 1); opacity: 1 !important; }
+#lien-note-le-trakttv a:hover		{ background-color: rgba(130,49,164, 1); color: rgba(255,255,255, 1); opacity: 1 !important; }
+#lien-note-le-tvtime a:hover		{ background-color: rgba(255,212,0, 1); color: rgba(255,255,255, 1); opacity: 1 !important; }
+
+@media (min-width: 428px) { }
+
+@media (min-width: 576px) {
+	hr									{ margin: 1.5rem auto; opacity: 1; }
+	.synopsis							{ font-size: 1.05rem; }
+	.images-liste img					{ height: 125px; width: 190px; }
+	.carousel-caption					{ margin-bottom: 1.5rem; }
+	.img-fiche							{ border-radius: var(--bs-border-radius) !important; display: flex !important; height: 330px !important; width: 220px !important; }
+	.img-fiche-artiste					{ height: 305px !important; width: 205px !important; }
+	.numero-episode						{ width: auto; }
+	.img-profil-distribution			{ height: 305px !important; width: 205px !important; }
+	.img-recherche-film-serie			{ height: 200px !important; width: 135px !important; }
+	.img-recherche-artiste				{ height: 100px !important; width: 100px !important; }
+	.recherche-synopsis					{ -webkit-line-clamp: 5; font-size: .85rem; }
+	.bg-backdrop-recommandes-similaires,
+	.bg-backdrop						{ font-size: 1.4rem; padding: 1.20rem; }
+	.backdrop							{ border-radius: var(--bs-border-radius) !important; padding: 5rem; text-align: center; }
+	.btn-accordion						{ font-size: 1.75rem; }
+	.logo-carre							{ height: 50px; width: 50px; }
+}
+
+@media (min-width: 768px) { }
+
+@media (min-width: 992px) { }
+
+@media (min-width: 1200px) { }
+
+@media (min-width: 1400px) { }

@@ -1,0 +1,25 @@
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} ^diskigo\.com$ [NC]
+RewriteRule ^(.*)$ https://www.diskigo.com/$1 [L,R=301]
+
+ErrorDocument 400 /400
+ErrorDocument 401 /401
+ErrorDocument 403 /403
+ErrorDocument 404 /404
+ErrorDocument 405 /405
+ErrorDocument 408 /408
+
+RewriteRule ^([0-9]{3})$									erreur.php?code=$1					[L,QSA]
+
+RewriteRule ^favicon(?:-32x32)?\.ico$						assets/img/$0						[L]
+RewriteRule ^logo(?:-apple-touch-icon-180x180)?\.png$		assets/img/$0						[L]
+RewriteRule ^apple-touch-icon-192x192.png$					assets/img/$0						[L]
+
+RewriteRule ^maj$											maj.php								[L,QSA]
+RewriteRule ^sitemap\.xml$									sitemap.php							[L,QSA]
+RewriteRule ^(us|uk|de|es|fr|it|ca|au|in|se|ie)$			index.php?locale=$1					[L,QSA]
+RewriteRule ^(us|uk|de|es|fr|it|ca|au|in|se|ie)/(.*)$		index.php?locale=$1&recherche=$2	[L,QSA]
+
+RewriteRule ^amazon-(.+)$									redirection.php?redirect=$1			[L,QSA]
+RewriteRule ^amazon-$										/									[R=301,L]

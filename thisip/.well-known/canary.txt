@@ -1,0 +1,73 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Déclaration Canary de https://thisip.pw/
+
+Déclarations
+====================
+
+1. La dernière mise à jour du fichier est
+en date du 15 juin 2025
+
+2. La clé PGP principale de signature de ThisiP.pw est
+utilisée pour signer cette déclaration Canary.
+
+Son identifiant est « D916DF57C8B9483A » et son empreinte est :
+
+755B 0E21 3DA0 A954 F668 C685 D916 DF57 C8B9 483A
+
+Lien :
+https://thisip.pw/.well-known/pgp.txt
+
+3. Aucun mandat n’a jamais été délivré à l’encontre du
+site ThisIP.pw (par exemple, pour remettre les clés privées
+de signature ou pour introduire des portes dérobées),
+ni aucune perquisition ou saisie n’a eu lieu
+
+4. La prochaine déclaration est prévue avant la fin
+du mois de décembre 2025. Une attention particulière
+devrait être portée si aucune nouvelle déclaration
+de Canary n’est publiée avant cette date, ou si la
+liste des déclarations change sans explication plausible.
+
+Avertissements et Notes
+====================
+
+Ce mécanisme n’est pas infaillible. Bien que signer
+cryptographiquement, un tiers ne pourra pas produire
+une déclaration. Cela n’empêche pas l’utilisation
+de la force ou d’autres moyens, tels que le chantage
+ou la compromission des ordinateurs du/des signataire(s),
+pour contraindre à produire une fausse déclaration.
+
+Cette déclaration est simplement un effort de bonne foi
+et est fournie sans aucune garantie, ni caution,
+et n’est juridiquement contraignante pour personne.
+Aucun des signataires ne doit jamais être tenu légalement
+responsable de l’une des déclarations faites ici.
+
+Preuve de date
+====================
+
+Site : Dépôt GitHub officiel du Kernel Linux
+Titre : Linux 6.16-rc2
+Auteur : Linus Torvalds
+Date : 15 juin 2025
+Lien : https://github.com/torvalds/linux/commit/e04c78d86a9699d136910cfc0bdcf01087e3267e
+
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCAAdFiEEdVsOIT2gqVT2aMaF2RbfV8i5SDoFAmhPf9oACgkQ2RbfV8i5
+SDp3xQ/+PBgt3AaoSEjXYpEjPuVAtVLIxXh7sbPKWfw62dbn8P3qQAsKyQJwjB3C
+dpabCU3GwJvpJe3cGpnfWFDw/X5MfpK5vv+69TQU3CtRG34TqJKxjC7qE3P1DgkM
++KARGkgAl0vxnLdF6AEHfQW3EJDWuo2S6eAkGk6d2B7hXskeJ/2oU1XgIgyb+Y7j
+bXHBKLkPOhs9s5KzB4T3l2QfIufUp5Bqo2PcqUdzKA4fWgiwb+Hhxo78VRvWjO8P
+vFUfMx8/gws4D08Gumylnyt7geIAIiFD3LZP9P40P7T39PsSrKPqBsvEmwnEvig9
+GkRmsd47m2ckBumqc4+2kgdCgvX7zszDcBxhkYL3l0TrBL8CBC/sV2jZ/ziW3YjQ
+1vzVw7q7/bZApP/rZL2qqm4a3y5w2hu+HPxNP2KCUL+gUywwKkEISN2Rp8DjU+Ra
+SjgXjdi4rHJM1yZ6ydw96P8afQvsVY+tIZ8U2h6/DK3HtF3lXhJyllrdSq9sr4Ub
+bnWVop9n60uEi9Yil95NvcuyydzNZ2GLnmesVE/ZHglLNrMmCUQuiHL7D7rQvCo0
+GkrilXzAPGjuClgMFnpgYiFABCFbTKgyAoXodvZSSp0/O/vPn0fFLrYkp+eByXcd
+EwbgbNprdvwh1KuTvm6ZHO5pcNEDQcpOofTY++LhSlvvDsUXC6w=
+=9PGG
+-----END PGP SIGNATURE-----

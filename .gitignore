@@ -1,0 +1,16 @@
+.vscode/*
+
+config/bdd.php
+config/diskigo_bdd.php
+config/wow_bdd.php
+config/wow_config.php
+
+diskigo/.vscode/*
+
+hdv/.vscode/*
+
+thisip/.vscode/*
+thisip/assets/cache/dom/*
+thisip/assets/cache/ip/*
+thisip/assets/cache/kaotic/*
+thisip/assets/cache/tmdb/*

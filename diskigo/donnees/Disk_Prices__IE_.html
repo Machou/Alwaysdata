@@ -1,0 +1,1382 @@
+<html lang="en"><head>
+    <title>Disk Prices (IE)</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Comparison of all hard drives and SSDs on Amazon, sorted by price per TB">
+
+<style>
+body {
+	font-family: sans-serif;
+	font-size: 10pt;
+	margin: 0;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	line-height: 1.5em;
+}
+
+table, td, tr, th {
+	border: 0;
+}
+
+th {
+	text-align: left;
+	padding-right: 3em;
+}
+
+tr {
+	line-height: 1.2em;
+}
+
+td {
+	vertical-align: top;
+	white-space: nowrap;
+}
+
+td.name {
+	white-space: normal;
+}
+
+th {
+	padding-right: 0.75em;
+}
+
+fieldset {
+	width: 10em;
+	margin: 0;
+	margin-bottom: 0.5em;
+	border: 1px solid black;
+}
+
+label {
+	display: block;
+}
+
+#filters {
+	float: left;
+	padding: 0.5em;
+}
+
+#filters .capacity label {
+    display: inline-block;
+    width: 4em;
+}
+
+#filters .capacity input {
+    display: inline-block;
+    width: 3.5em;
+}
+
+legend {
+	font-weight: bold;
+	padding-left: 0;
+}
+
+td input {
+	width: 3em;
+}
+
+td select {
+	width: 10em;
+}
+
+#diskprices {
+	padding: 0.5em;
+}
+
+.hidden {
+    display: none;
+}
+
+.active {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+#disclosures {
+    margin: 1em;
+}
+
+#notices .new {
+    color: #ffa400;
+    font-weight: bold;
+}
+
+#beta {
+    width: 100%;
+    background-color: #0064af;
+    color: #fff;
+    font-weight: bold;
+    padding: 0.5em;
+}
+
+</style>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
+<link rel="manifest" href="/static/site.webmanifest">
+<link rel="mask-icon" href="/static/safari-pinned-tab.svg" color="#000000">
+<link rel="shortcut icon" href="/favicon.ico">
+
+
+<link rel="canonical" href="https://diskprices.com/?locale=ie">
+
+
+<meta name="msapplication-TileColor" content="#000000">
+<meta name="theme-color" content="#ffffff">
+
+  </head>
+  <body>
+      <div id="beta">Support for amazon.ie is in beta mode. A more complete listing will be available soon!</div>
+
+      
+        
+        <div id="filters">
+          <fieldset id="locales">
+            <legend>Data source</legend>
+            <ul>
+              
+              <a href="/?locale=us"><li>amazon.com</li></a>
+              
+              <a href="/?locale=uk"><li>amazon.co.uk</li></a>
+              
+              <a href="/?locale=de"><li>amazon.de</li></a>
+              
+              <a href="/?locale=es"><li>amazon.es</li></a>
+              
+              <a href="/?locale=fr"><li>amazon.fr</li></a>
+              
+              <a href="/?locale=it"><li>amazon.it</li></a>
+              
+              <a href="/?locale=ca"><li>amazon.ca</li></a>
+              
+              <a href="/?locale=au"><li>amazon.com.au</li></a>
+              
+              <a href="/?locale=in"><li>amazon.in</li></a>
+              
+              <a href="/?locale=se"><li>amazon.se</li></a>
+              
+              <a href="/?locale=ie" class="active"><li>amazon.ie</li></a>
+              
+            </ul>
+          </fieldset>
+          <fieldset class="condition">
+              <legend>Condition</legend>
+              <label><input type="checkbox" data-condition="new" checked="">New</label>
+              <label><input type="checkbox" data-condition="used" checked="">Used</label>
+          </fieldset>
+          <fieldset class="units">
+              <legend>Price per</legend>
+              <label><input type="radio" name="units" data-units="tb" checked="">TB (Terabyte)</label>
+              <label><input type="radio" name="units" data-units="gb">GB (Gigabyte)</label>
+          </fieldset>
+          <fieldset class="capacity">
+              <legend>Capacity</legend>
+              <input type="number" id="capacity_min" size="2" min="0" placeholder="TB">
+              <label for="capacity_min">Minimum</label>
+              <input type="number" id="capacity_max" size="2" min="0" placeholder="TB">
+              <label for="capacity_max">Maximum</label>
+          </fieldset>
+          
+          <fieldset class="category">
+              <legend>
+                  <label><input type="checkbox" data-category="hdd" checked="">Rotational</label>
+              </legend>
+              
+              <div class="product_type">
+                  <label><input type="checkbox" class="filter" data-category="hdd" data-product-type="external_hdd" checked="">External 3.5"</label>
+              </div>
+              
+              <div class="product_type">
+                  <label><input type="checkbox" class="filter" data-category="hdd" data-product-type="external_hdd25" checked="">External 2.5"</label>
+              </div>
+              
+              <div class="product_type">
+                  <label><input type="checkbox" class="filter" data-category="hdd" data-product-type="internal_hdd" checked="">Internal 3.5"</label>
+              </div>
+              
+              <div class="product_type">
+                  <label><input type="checkbox" class="filter" data-category="hdd" data-product-type="internal_hdd25" checked="">Internal 2.5"</label>
+              </div>
+              
+              <div class="product_type">
+                  <label><input type="checkbox" class="filter" data-category="hdd" data-product-type="internal_sshd" checked="">Internal Hybrid</label>
+              </div>
+              
+              <div class="product_type">
+                  <label><input type="checkbox" class="filter" data-category="hdd" data-product-type="internal_sas" checked="">Internal SAS</label>
+              </div>
+              
+          </fieldset>
+          
+          <fieldset class="category">
+              <legend>
+                  <label><input type="checkbox" data-category="ssd" checked="">Solid State</label>
+              </legend>
+              
+              <div class="product_type">
+                  <label><input type="checkbox" class="filter" data-category="ssd" data-product-type="external_ssd" checked="">External SSD</label>
+              </div>
+              
+              <div class="product_type">
+                  <label><input type="checkbox" class="filter" data-category="ssd" data-product-type="internal_ssd" checked="">Internal SSD</label>
+              </div>
+              
+              <div class="product_type">
+                  <label><input type="checkbox" class="filter" data-category="ssd" data-product-type="m2_ssd" checked="">M.2 SATA</label>
+              </div>
+              
+              <div class="product_type">
+                  <label><input type="checkbox" class="filter" data-category="ssd" data-product-type="m2_nvme" checked="">M.2 NVMe</label>
+              </div>
+              
+              <div class="product_type">
+                  <label><input type="checkbox" class="filter" data-category="ssd" data-product-type="u2" checked="">U.2/U.3</label>
+              </div>
+              
+          </fieldset>
+          
+          <fieldset class="category">
+              <legend>
+                  <label><input type="checkbox" data-category="removable">Removable</label>
+              </legend>
+              
+              <div class="product_type">
+                  <label><input type="checkbox" class="filter" data-category="removable" data-product-type="microsd">microSD Flash</label>
+              </div>
+              
+              <div class="product_type">
+                  <label><input type="checkbox" class="filter" data-category="removable" data-product-type="sd_card">SD Flash</label>
+              </div>
+              
+              <div class="product_type">
+                  <label><input type="checkbox" class="filter" data-category="removable" data-product-type="cf_card">Compact Flash</label>
+              </div>
+              
+              <div class="product_type">
+                  <label><input type="checkbox" class="filter" data-category="removable" data-product-type="cfast_card">CFast Flash</label>
+              </div>
+              
+              <div class="product_type">
+                  <label><input type="checkbox" class="filter" data-category="removable" data-product-type="cfexpress">CFexpress Flash</label>
+              </div>
+              
+              <div class="product_type">
+                  <label><input type="checkbox" class="filter" data-category="removable" data-product-type="usb_flash">USB Flash</label>
+              </div>
+              
+          </fieldset>
+          
+          <fieldset class="category">
+              <legend>
+                  <label><input type="checkbox" data-category="optical">Optical</label>
+              </legend>
+              
+              <div class="product_type">
+                  <label><input type="checkbox" class="filter" data-category="optical" data-product-type="bdrw">BD-RE</label>
+              </div>
+              
+              <div class="product_type">
+                  <label><input type="checkbox" class="filter" data-category="optical" data-product-type="bdr">BD-R</label>
+              </div>
+              
+              <div class="product_type">
+                  <label><input type="checkbox" class="filter" data-category="optical" data-product-type="dvdrw">DVD-RW</label>
+              </div>
+              
+              <div class="product_type">
+                  <label><input type="checkbox" class="filter" data-category="optical" data-product-type="dvdr">DVD-R</label>
+              </div>
+              
+              <div class="product_type">
+                  <label><input type="checkbox" class="filter" data-category="optical" data-product-type="cdrw">CD-RW</label>
+              </div>
+              
+              <div class="product_type">
+                  <label><input type="checkbox" class="filter" data-category="optical" data-product-type="cdr">CD-R</label>
+              </div>
+              
+          </fieldset>
+          
+          <fieldset class="category">
+              <legend>
+                  <label><input type="checkbox" data-category="tape">Tape</label>
+              </legend>
+              
+              <div class="product_type">
+                  <label><input type="checkbox" class="filter" data-category="tape" data-product-type="lto3">LTO-3</label>
+              </div>
+              
+              <div class="product_type">
+                  <label><input type="checkbox" class="filter" data-category="tape" data-product-type="lto4">LTO-4</label>
+              </div>
+              
+              <div class="product_type">
+                  <label><input type="checkbox" class="filter" data-category="tape" data-product-type="lto5">LTO-5</label>
+              </div>
+              
+              <div class="product_type">
+                  <label><input type="checkbox" class="filter" data-category="tape" data-product-type="lto6">LTO-6</label>
+              </div>
+              
+              <div class="product_type">
+                  <label><input type="checkbox" class="filter" data-category="tape" data-product-type="lto7">LTO-7</label>
+              </div>
+              
+              <div class="product_type">
+                  <label><input type="checkbox" class="filter" data-category="tape" data-product-type="lto8">LTO-8</label>
+              </div>
+              
+              <div class="product_type">
+                  <label><input type="checkbox" class="filter" data-category="tape" data-product-type="lto9">LTO-9</label>
+              </div>
+              
+          </fieldset>
+          
+          <fieldset id="notices">
+              Join us on <a href="https://libera.chat/">Libera IRC</a> in the #diskprices channel!
+          </fieldset>
+          <fieldset id="links">
+              <ul>
+                  <a href="/faq.html"><li>FAQ</li></a>
+                  <a href="/privacy.html"><li>Privacy policy</li></a>
+              </ul>
+          </fieldset>
+          <fieldset class="last">
+              This site is supported by paid affiliate links. <a href="/faq.html#disclosures">Learn more</a>
+          </fieldset>
+        </div>
+        
+
+        
+        <script>
+        var page_locale = 'ie';
+        default_filters = {};
+var f = document.getElementById('filters');
+
+function get_filters() {
+  var filters = {
+    category: {},
+    condition: {},
+    units: null,
+    capacity_min: 0,
+    capacity_max: null
+  };
+
+  f.querySelectorAll('.product_type input').forEach(function(checkbox) {
+    if(!filters.category[checkbox.dataset.category]) {
+      filters.category[checkbox.dataset.category] = {};
+    }
+    filters.category[checkbox.dataset.category][checkbox.dataset.productType] = checkbox.checked;
+  });
+
+  f.querySelectorAll('.condition input').forEach(function(checkbox) {
+    filters.condition[checkbox.dataset.condition] = checkbox.checked;
+  });
+
+  f.querySelectorAll('.units input').forEach(function(radio) {
+    if(radio.checked) {
+      filters.units = radio.dataset.units;
+    }
+  });
+
+  filters.capacity_min = 0.0;
+  var capacity_min = f.querySelector('.capacity input#capacity_min')
+  capacity_min = Number(capacity_min.value);
+  if(Number.isFinite(capacity_min) && capacity_min >= 0) {
+    filters.capacity_min = capacity_min;
+  }
+
+  filters.capacity_max = null;
+  var capacity_max = f.querySelector('.capacity input#capacity_max')
+  if(capacity_max.value) {
+    capacity_max = Number(capacity_max.value);
+    if(Number.isFinite(capacity_max) && capacity_max >= filters.capacity_min) {
+      filters.capacity_max = capacity_max;
+    }
+  }
+
+  return filters;
+}
+
+function set_filters(filters) {
+  var f = document.getElementById('filters');
+
+  for(var category in filters.category) {
+    for(var productType in filters.category[category]) {
+      var el = f.querySelector('.product_type input[data-product-type="' + productType + '"]');
+      el.checked = filters.category[category][productType];
+    }
+  }
+
+  for(var condition in filters.condition) {
+    var el = f.querySelector('.condition input[data-condition="' + condition + '"]');
+    el.checked = filters.condition[condition];
+  }
+
+  f.querySelectorAll('.units input').forEach(function(radio) {
+    radio.checked = (radio.dataset.units == filters.units);
+  });
+
+  f.querySelectorAll('.capacity input').forEach(function(element) {
+    if(filters[element.id] !== null && Number.isFinite(filters[element.id]) && filters[element.id] > 0) {
+      element.value = filters[element.id];
+    }
+    element.placeholder = filters.units.toUpperCase();
+  });
+}
+
+function update_categories(filters) {
+  for(var category in filters.category) {
+    var num_product_types = Object.keys(filters.category[category]).length;
+    var count = 0;
+    for(var productType in filters.category[category]) {
+      if(filters.category[category][productType]) {
+        count += 1;
+      }
+    }
+    var el = document.querySelector('.category legend input[data-category="' + category + '"]');
+
+    if(count == num_product_types) {
+      // all productTypes in category are selected
+      el.checked = true;
+      el.indeterminate = false;
+    }else if(count > 0) {
+      // some productTypes are selected
+      el.checked = false;
+      el.indeterminate = true;
+    }else{
+      // no productTypes are selected
+      el.checked = false;
+      el.indeterminate = false;
+    }
+  }
+}
+
+function in_range(num, min, max) {
+  if(max === null) {
+    return (num >= min);
+  }else{
+    return (num >= min && num <= max);
+  }
+}
+
+function update_table(filters) {
+  var table = document.getElementById('diskprices-body');
+  var product_filters = {};
+  for(var category in filters.category) {
+    for(var productType in filters.category[category]) {
+      product_filters[productType] = filters.category[category][productType];
+    }
+  }
+
+  for(var i = 0; i < table.children.length; i++) {
+    var row = table.children[i];
+
+    var capacity = Number(row.dataset.capacity);
+    if(filters.units == 'tb') {
+      capacity = capacity / 1000;
+    }
+
+    if(product_filters[row.dataset.productType] &&
+       filters.condition[row.dataset.condition] &&
+       in_range(capacity, filters.capacity_min, filters.capacity_max)) {
+      row.style.display = '';
+    }else{
+      row.style.display = 'none';
+    }
+
+    var price_per_gb = row.children[0];
+    var price_per_tb = row.children[1];
+    if(filters.units == 'gb') {
+      price_per_gb.classList.remove('hidden');
+      price_per_tb.classList.add('hidden');
+    }else{
+      price_per_gb.classList.add('hidden');
+      price_per_tb.classList.remove('hidden');
+    }
+  }
+
+  var thead = document.getElementById('diskprices-head');
+  var price_per_gb = thead.children[0];
+  var price_per_tb = thead.children[1];
+  if(filters.units == 'gb') {
+    price_per_gb.classList.remove('hidden');
+    price_per_tb.classList.add('hidden');
+  }else{
+    price_per_gb.classList.add('hidden');
+    price_per_tb.classList.remove('hidden');
+  }
+}
+
+function get_urlstate() {
+  var q = new URLSearchParams(window.location.search);
+
+  var productTypes = q.get('disk_types');
+  if(productTypes === null) {
+    productTypes = [];
+  }else{
+    if(productTypes.indexOf(',') != -1) {
+      productTypes = productTypes.split(',');
+    }else{
+      productTypes = [productTypes];
+    }
+  }
+
+  var conditions = q.get('condition');
+  if(conditions === null) {
+    conditions = [];
+  }else{
+    if(conditions.indexOf(',') != -1) {
+      conditions = conditions.split(',');
+    }else{
+      conditions = [conditions];
+    }
+  }
+
+  var filters = get_filters();
+  var count = 0;
+  for(var category in filters.category) {
+    for(var productType in filters.category[category]) {
+      if(productTypes.indexOf(productType) != -1) {
+        filters.category[category][productType] = true;
+        count += 1;
+      }else{
+        filters.category[category][productType] = false;
+      }
+    }
+  }
+
+  for(var condition in filters.condition) {
+    if(conditions.indexOf(condition) != -1) {
+      filters.condition[condition] = true;
+      count += 1;
+    }else{
+      filters.condition[condition] = false;
+    }
+  }
+
+  var units = q.get('units');
+
+  if(units !== null) {
+    filters.units = units.toLowerCase();
+    count += 1;
+  }else{
+    filters.units = default_filters.units;
+  }
+
+  var capacity_range = q.get('capacity');
+  if(capacity_range !== null) {
+    capacity_range = capacity_range.split('-');
+    if(capacity_range.length == 2) {
+      var min = Number(capacity_range[0]);
+      var max = Number(capacity_range[1]);
+      if(Number.isFinite(min) && min >= 0) {
+        filters.capacity_min = min;
+        count += 1;
+      }
+      if(Number.isFinite(max) && max > 0) {
+        filters.capacity_max = max;
+      }
+    }
+  }
+
+  if(count > 0) {
+    return filters;
+  }else{
+    return null;
+  }
+}
+
+function set_urlstate(filters) {
+  var productTypes = [];
+  var conditions = [];
+
+  for(var category in filters.category) {
+    for(var productType in filters.category[category]) {
+      if(filters.category[category][productType]) {
+        productTypes.push(productType);
+      }
+    }
+  }
+
+  for(var condition in filters.condition) {
+    if(filters.condition[condition]) {
+      conditions.push(condition);
+    }
+  }
+
+  var qs = [];
+  if(conditions.length > 0) {
+    qs.push('condition=' + conditions.join(','));
+  }
+  if(filters.units != default_filters.units) {
+    qs.push('units=' + filters.units);
+  }
+
+  var capacity = '-';
+  if(filters.capacity_min > 0) {
+    capacity = filters.capacity_min + capacity;
+  }
+  if(filters.capacity_max !== null) {
+    capacity += filters.capacity_max;
+  }
+  if(capacity != '-') {
+    qs.push('capacity=' + capacity);
+  }
+
+  if(productTypes.length > 0) {
+    qs.push('disk_types=' + productTypes.join(','));
+  }
+
+  if(qs.length > 0) {
+    qs.unshift('locale=' + page_locale);
+    window.history.pushState(null, '', window.location.pathname + '?' + qs.join('&'));
+  }else{
+    window.history.pushState(null, '', window.location.pathname);
+  }
+}
+
+function click_category(event) {
+  var category = event.target.dataset.category;
+  document.querySelectorAll('.product_type input[data-category="' + category + '"]').forEach(function(checkbox) {
+    checkbox.checked = event.target.checked;
+  });
+
+  var filters = get_filters();
+  update_table(filters);
+  set_urlstate(filters);
+}
+
+function click_product_type(event) {
+  update_categories(get_filters());
+
+  var filters = get_filters();
+  update_table(filters);
+  set_urlstate(filters);
+}
+
+function click_condition(event) {
+  var filters = get_filters();
+  update_table(filters);
+  set_urlstate(filters);
+}
+
+function click_units(event) {
+  var filters = get_filters();
+  update_table(filters);
+  set_urlstate(filters);
+  f.querySelectorAll('.capacity input').forEach(function(element) {
+    element.placeholder = filters.units.toUpperCase();
+  });
+}
+
+function change_capacity(event) {
+  var filters = get_filters();
+  update_table(filters);
+  set_urlstate(filters);
+}
+
+default_filters = get_filters();
+
+f.querySelectorAll('.category legend input').forEach((el) =>
+  el.addEventListener('click', click_category));
+f.querySelectorAll('.product_type input').forEach((el) =>
+  el.addEventListener('click', click_product_type));
+f.querySelectorAll('.condition input').forEach((el) =>
+  el.addEventListener('click', click_condition));
+f.querySelectorAll('.units input').forEach((el) =>
+  el.addEventListener('click', click_units));
+f.querySelectorAll('.capacity input').forEach((el) => {
+  el.addEventListener('keyup', change_capacity);
+  el.addEventListener('change', change_capacity);
+});
+
+window.addEventListener('popstate', function() {
+  var filters = get_urlstate();
+  if(filters === null) {
+    filters = default_filters;
+  }
+  set_filters(filters);
+  update_categories(filters);
+  update_table(filters);
+});
+
+document.addEventListener('DOMContentLoaded', function(event) {
+  var filters = get_urlstate();
+
+  if(filters === null) {
+    filters = default_filters;
+    update_categories(filters);
+  }else{
+    set_filters(filters);
+    update_categories(filters);
+    update_table(filters);
+  }
+
+  var req = new XMLHttpRequest();
+  req.open('POST', '/event', true);
+  req.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  req.send('ref=' + encodeURIComponent(document.referrer));
+});
+
+        </script>
+        
+
+        
+        <table id="diskprices">
+          <thead>
+            <tr id="diskprices-head">
+              <th class="price-per-gb hidden">Price&nbsp;per&nbsp;GB</th>
+              <th class="price-per-tb">Price&nbsp;per&nbsp;TB</th>
+              <th>Price</th>
+              <th>Capacity</th>
+              <th>Warranty</th>
+              <th>Form&nbsp;Factor</th>
+              <th>Technology</th>
+              <th>Condition</th>
+              <th>Affiliate Link</th>
+            </tr>
+          </thead>
+          <tbody id="diskprices-body" lang="en">
+          
+            <tr class="disk" data-product-type="lto9" data-condition="new" data-capacity="18000.0" style="display:none">
+              <td class="price-per-gb hidden">€0,007</td>
+              <td class="price-per-tb">€6,644</td>
+              <td>€598</td>
+              <td>18 TB x5</td>
+              <td>2 years</td>
+              <td>Tape</td>
+              <td>LTO-9</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B0BLDXYW1T?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">TANDBERG - OVERLAND OT LTO-9 Data Cartridge 5PK W/BC with Limited Lifetime WARRA</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="internal_hdd" data-condition="new" data-capacity="16000.0">
+              <td class="price-per-gb hidden">€0,017</td>
+              <td class="price-per-tb">€16,62</td>
+              <td>€266</td>
+              <td>16 TB</td>
+              <td></td>
+              <td>Internal 3.5"</td>
+              <td>HDD</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B07XM9RM95?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">Seagate 16TB ST16000NM001G Exos X16 SATA 6Gb/s 7.2K RPM 512e/4Kn 256Mb, OEM, Mechanical Hard Disk</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="external_hdd" data-condition="new" data-capacity="20000.0">
+              <td class="price-per-gb hidden">€0,017</td>
+              <td class="price-per-tb">€16,79</td>
+              <td>€336</td>
+              <td>20 TB</td>
+              <td>3 years</td>
+              <td>External 3.5"</td>
+              <td>HDD</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B0B2PZWD81?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">Seagate Expansion Desktop 20TB, External Hard Drive, USB 3.0, Data Rescue Services (STKP20000400)</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="external_hdd" data-condition="new" data-capacity="16000.0">
+              <td class="price-per-gb hidden">€0,018</td>
+              <td class="price-per-tb">€17,74</td>
+              <td>€284</td>
+              <td>16 TB</td>
+              <td>3 years</td>
+              <td>External 3.5"</td>
+              <td>HDD</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B093BWYJ9Q?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">Seagate Expansion Desktop 16TB, External Hard Drive, USB 3.0, Data Rescue Services (STKP16000400)</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="internal_hdd" data-condition="new" data-capacity="2000.0">
+              <td class="price-per-gb hidden">€0,018</td>
+              <td class="price-per-tb">€18,42</td>
+              <td>€37</td>
+              <td>2 TB</td>
+              <td>1 year</td>
+              <td>Internal 3.5"</td>
+              <td>HDD</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B0BLDSQCNJ?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">Sonnics 3.5" SATA Hard Drive 7200RPM Desktop PC/Surveillance Storage Hard Drive CCTV Camera CCTV System DVR (2TB)</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="internal_hdd" data-condition="new" data-capacity="22000.0">
+              <td class="price-per-gb hidden">€0,019</td>
+              <td class="price-per-tb">€18,76</td>
+              <td>€413</td>
+              <td>22 TB</td>
+              <td></td>
+              <td>Internal 3.5"</td>
+              <td>HDD</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B0CN5LBWRD?tag=diskprices08-21&amp;linkCode=ogv&amp;th=1&amp;psc=1">Toshiba 22TB Enterprise Internal Hard Drive – MG Series 3.5" SATA HDD for Server, Storage, 24/7 Operation, Hyperscale, Cloud (MG10AFA22TE)</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="internal_hdd" data-condition="new" data-capacity="12000.0">
+              <td class="price-per-gb hidden">€0,019</td>
+              <td class="price-per-tb">€18,80</td>
+              <td>€226</td>
+              <td>12 TB</td>
+              <td>1 year</td>
+              <td>Internal 3.5"</td>
+              <td>HDD</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B07LH55GC2?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">Seagate IronWolf Pro, 12 TB, NAS Internal Hard Drive, CMR 3.5 Inch, SATA 6 Gb/s 7,200 RPM, 256 MB Cache, for RAID Network Attached Storage, 3 years Rescue Services, FFP (ST12000NE0008)</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="internal_hdd" data-condition="new" data-capacity="20000.0">
+              <td class="price-per-gb hidden">€0,019</td>
+              <td class="price-per-tb">€18,82</td>
+              <td>€376</td>
+              <td>20 TB</td>
+              <td>2 years</td>
+              <td>Internal 3.5"</td>
+              <td>HDD</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B0BMQWLCCM?tag=diskprices08-21&amp;linkCode=ogv&amp;th=1&amp;psc=1">Toshiba 20TB Enterprise Internal Hard Drive – MG Series 3.5" SATA HDD for Server, Storage, 24/7 Operation, Hyperscale, Cloud (MG10ACA20TE)</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="internal_hdd" data-condition="new" data-capacity="8000.0">
+              <td class="price-per-gb hidden">€0,019</td>
+              <td class="price-per-tb">€19,02</td>
+              <td>€152</td>
+              <td>8 TB</td>
+              <td>2 years</td>
+              <td>Internal 3.5"</td>
+              <td>HDD</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B075WYBQXJ?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">Seagate BarraCuda, 8 TB, Internal Hard Drive, SATA 6 Gbit/s, 3.5", 5400 RPM, 256 MB Cache for Desktop PC (ST8000DM004)</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="internal_hdd" data-condition="new" data-capacity="18000.0">
+              <td class="price-per-gb hidden">€0,020</td>
+              <td class="price-per-tb">€19,82</td>
+              <td>€357</td>
+              <td>18 TB</td>
+              <td></td>
+              <td>Internal 3.5"</td>
+              <td>HDD</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B093Z5LFWD?tag=diskprices08-21&amp;linkCode=ogv&amp;th=1&amp;psc=1">Toshiba 18TB Enterprise Internal Hard Drive – MG Series 3.5" SATA HDD for Server, Storage, 24/7 Operation, Hyperscale, Cloud (MG09ACA18TE)</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="external_hdd" data-condition="new" data-capacity="6000.0">
+              <td class="price-per-gb hidden">€0,021</td>
+              <td class="price-per-tb">€21,47</td>
+              <td>€129</td>
+              <td>6 TB</td>
+              <td>2 years</td>
+              <td>External 3.5"</td>
+              <td>HDD</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B093BVQYYM?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">Seagate Expansion Desktop 6TB, External Hard Drive, USB 3.0, Data Rescue Services (STKP6000400)</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="internal_hdd" data-condition="new" data-capacity="12000.0">
+              <td class="price-per-gb hidden">€0,022</td>
+              <td class="price-per-tb">€21,56</td>
+              <td>€259</td>
+              <td>12 TB</td>
+              <td>3 years</td>
+              <td>Internal 3.5"</td>
+              <td>HDD</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B07J351T2V?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">Seagate IronWolf ST12000VN0008 - Hard drive - 12 TB - internal - 3.5" - SATA 6Gb/s - 7200 rpm - buffer: 256 MB Mechanical Hard Disk</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="external_hdd" data-condition="new" data-capacity="20000.0">
+              <td class="price-per-gb hidden">€0,022</td>
+              <td class="price-per-tb">€21,63</td>
+              <td>€433</td>
+              <td>20 TB</td>
+              <td>2 years</td>
+              <td>External 3.5"</td>
+              <td>HDD</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B09TYZCN61?tag=diskprices08-21&amp;linkCode=ogv&amp;th=1&amp;psc=1">WD 20TB Elements External Hard Drive, Desktop HDD storage, USB 3.0 compatible, Fast Transfer rates, Plug-and-play storage for all your pictures, videos, music and documents, Black</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="internal_hdd" data-condition="new" data-capacity="8000.0">
+              <td class="price-per-gb hidden">€0,022</td>
+              <td class="price-per-tb">€21,67</td>
+              <td>€173</td>
+              <td>8 TB</td>
+              <td>2 years</td>
+              <td>Internal 3.5"</td>
+              <td>HDD</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B07H289S7C?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">Seagate BarraCuda 8TB, Internal Hard Drive, 3.5 Inch, SATA, 6GB/s,, 5.400 RPM, 256MB Cache, for Computer Desktop PC, FFP (ST8000DMZ04)</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="internal_hdd" data-condition="new" data-capacity="16000.0">
+              <td class="price-per-gb hidden">€0,022</td>
+              <td class="price-per-tb">€21,69</td>
+              <td>€347</td>
+              <td>16 TB</td>
+              <td>5 years</td>
+              <td>Internal 3.5"</td>
+              <td>HDD</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B0832BL1HC?tag=diskprices08-21&amp;linkCode=ogv&amp;th=1&amp;psc=1">Toshiba 16TB Enterprise Internal Hard Drive – MG Series 3.5" SATA HDD for Server, Storage, 24/7 Operation, Hyperscale, Cloud (MG08ACA16TE)</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="internal_hdd" data-condition="new" data-capacity="16000.0">
+              <td class="price-per-gb hidden">€0,022</td>
+              <td class="price-per-tb">€22,29</td>
+              <td>€357</td>
+              <td>16 TB</td>
+              <td>3 years</td>
+              <td>Internal 3.5"</td>
+              <td>HDD</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B07SJTST6T?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">Seagate IronWolf Pro, 16 TB, NAS Internal Hard Drive, CMR 3.5 Inch, SATA 6 Gb/s 7,200 RPM, 256 MB Cache, for RAID Network Attached Storage, 3 years Rescue Services, FFP (‎ST16000NE000)</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="internal_hdd" data-condition="new" data-capacity="6000.0">
+              <td class="price-per-gb hidden">€0,023</td>
+              <td class="price-per-tb">€22,84</td>
+              <td>€137</td>
+              <td>6 TB</td>
+              <td>2 years</td>
+              <td>Internal 3.5"</td>
+              <td>HDD</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B0BLT1WXKC?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">Seagate SkyHawk 6TB, Video Internal Hard Drive, 3.5", SATA, 6Gb/s, 64MB Cache, for DVR/NVR Security Camera System, with Drive Health Management, Data Rescue Services, FFP (ST6000VXZ09)</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="internal_hdd" data-condition="new" data-capacity="16000.0">
+              <td class="price-per-gb hidden">€0,023</td>
+              <td class="price-per-tb">€23,06</td>
+              <td>€369</td>
+              <td>16 TB</td>
+              <td>3 years</td>
+              <td>Internal 3.5"</td>
+              <td>HDD</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B0B94NFYWX?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">Seagate IronWolf Pro 16TB, Enterprise Internal NAS HDD, CMR 3.5 Inch, SATA 6GB/s, 7.200 RPM, 256MB Cache for RAID NAS, Data Rescue Services, Frustration Free Packaging (ST16000NTZ01)</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="internal_hdd" data-condition="new" data-capacity="12000.0">
+              <td class="price-per-gb hidden">€0,023</td>
+              <td class="price-per-tb">€23,23</td>
+              <td>€279</td>
+              <td>12 TB</td>
+              <td>3 years</td>
+              <td>Internal 3.5"</td>
+              <td>HDD</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B08147LZFD?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">Seagate IronWolf, 12TB, NAS, Internal Hard Drive, CMR, 3.5 Inch, SATA, 6GB/s, 7200 RPM, 256MB Cache, for RAID Network Attached Storage, 3 year Rescue Services, FFP (ST12000VNZ008)</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="internal_hdd" data-condition="new" data-capacity="14000.0">
+              <td class="price-per-gb hidden">€0,024</td>
+              <td class="price-per-tb">€23,94</td>
+              <td>€335</td>
+              <td>14 TB</td>
+              <td>3 years</td>
+              <td>Internal 3.5"</td>
+              <td>HDD</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B07GTGDZP8?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">Seagate IronWolf Pro, 14 TB, NAS Internal Hard Drive, CMR 3.5 Inch, SATA 6 Gb/s 7,200 RPM, 256 MB Cache, for RAID Network Attached Storage, 3 years Rescue Services, FFP (ST14000NE0008)</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="internal_hdd" data-condition="new" data-capacity="14000.0">
+              <td class="price-per-gb hidden">€0,024</td>
+              <td class="price-per-tb">€24,00</td>
+              <td>€336</td>
+              <td>14 TB</td>
+              <td></td>
+              <td>Internal 3.5"</td>
+              <td>HDD</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B07H7CKYGT?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">Seagate IronWolf Pro 14 TB NAS RAID Internal Hard Drive - 7,200 RPM SATA 6 Gb/s 3.5-inch (ST14000NE0008)</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="internal_hdd" data-condition="new" data-capacity="4000.0">
+              <td class="price-per-gb hidden">€0,024</td>
+              <td class="price-per-tb">€24,01</td>
+              <td>€96</td>
+              <td>4 TB</td>
+              <td>2 years</td>
+              <td>Internal 3.5"</td>
+              <td>HDD</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B0713R3Y6F?tag=diskprices08-21&amp;linkCode=ogv&amp;th=1&amp;psc=1">Seagate BarraCuda 4 TB Internal Hard Drive HDD – 3.5 Inch SATA 6 Gb/s 5400 RPM 256 MB Cache for Computer Desktop PC Laptop (ST4000DM004)</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="external_hdd" data-condition="new" data-capacity="24000.0">
+              <td class="price-per-gb hidden">€0,024</td>
+              <td class="price-per-tb">€24,02</td>
+              <td>€576</td>
+              <td>24 TB</td>
+              <td>2 years</td>
+              <td>External 3.5"</td>
+              <td>HDD</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B0D8WF5HY2?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">WD 24TB Elements External Hard Drive, Desktop HDD storage, USB 3.0 compatible, Fast Transfer rates, Plug-and-play storage for all your pictures, videos, music and documents, Black</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="internal_hdd" data-condition="new" data-capacity="2000.0">
+              <td class="price-per-gb hidden">€0,025</td>
+              <td class="price-per-tb">€25,45</td>
+              <td>€51</td>
+              <td>2 TB</td>
+              <td></td>
+              <td>Internal 3.5"</td>
+              <td>HDD</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B008B0RQ1C?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">Seagate ST2000VM003 Pipeline HD 2 TB 3.5-Inch Internal Hard Drive - Black</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="internal_hdd" data-condition="new" data-capacity="8000.0">
+              <td class="price-per-gb hidden">€0,026</td>
+              <td class="price-per-tb">€25,91</td>
+              <td>€207</td>
+              <td>8 TB</td>
+              <td>3 years</td>
+              <td>Internal 3.5"</td>
+              <td>HDD</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B0BM4T2L86?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">Seagate IronWolf 8TB, Internal NAS HDD, CMR, 3.5 Inch, SATA, 6GB/s, 5.400 RPM, 256MB Cache, Data Rescue Services, (ST8000VNZ02)</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="internal_hdd" data-condition="new" data-capacity="6000.0">
+              <td class="price-per-gb hidden">€0,026</td>
+              <td class="price-per-tb">€26,17</td>
+              <td>€157</td>
+              <td>6 TB</td>
+              <td>3 years</td>
+              <td>Internal 3.5"</td>
+              <td>HDD</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B0BM4VC65S?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">Seagate IronWolf 6TB, Internal NAS HDD, CMR 3.5 Inch, SATA 6GB/s, 5400 RPM, 256MB Cache for RAID NAS, Data Rescue Services, Frustration Free Packaging (ST6000VNZ06)</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="internal_hdd" data-condition="new" data-capacity="4000.0">
+              <td class="price-per-gb hidden">€0,029</td>
+              <td class="price-per-tb">€28,88</td>
+              <td>€116</td>
+              <td>4 TB</td>
+              <td>3 years</td>
+              <td>Internal 3.5"</td>
+              <td>HDD</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B09NHV3CK9?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">Seagate IronWolf 4TB, NAS, Internal Hard Drive, CMR, 3.5 Inch, SATA, 6GB/s, 5.400 RPM, 256MB Cache, for RAID Network Attached Storage, Data Rescue Services, FFP (ST4000VNZ06)</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="internal_hdd" data-condition="new" data-capacity="4000.0">
+              <td class="price-per-gb hidden">€0,030</td>
+              <td class="price-per-tb">€30,00</td>
+              <td>€120</td>
+              <td>4 TB</td>
+              <td>2 years</td>
+              <td>Internal 3.5"</td>
+              <td>HDD</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B0C4X6RDV8?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">WD Purple 4TB Surveillance 3.5" Internal Hard Drive, AllFrame Technology, 180BT/yr, 256MB Cache, 3 Year Warranty</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="internal_hdd" data-condition="new" data-capacity="4000.0">
+              <td class="price-per-gb hidden">€0,031</td>
+              <td class="price-per-tb">€30,99</td>
+              <td>€124</td>
+              <td>4 TB</td>
+              <td>2 years</td>
+              <td>Internal 3.5"</td>
+              <td>HDD</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B0BDXSK2K7?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">WD Red Plus 4TB NAS 3.5" Internal Hard Drive - 5400 RPM Class, SATA 6Gb/s, CMR, 256MB Cache</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="internal_hdd" data-condition="new" data-capacity="6000.0">
+              <td class="price-per-gb hidden">€0,033</td>
+              <td class="price-per-tb">€32,86</td>
+              <td>€197</td>
+              <td>6 TB</td>
+              <td>3 years</td>
+              <td>Internal 3.5"</td>
+              <td>HDD</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B0DR8WPPQD?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">WD Red Plus 6TB NAS 3.5" Internal Hard Drive - 5400 RPM Class, SATA 6 Gb/s, CMR, 256MB Cache</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="internal_hdd" data-condition="new" data-capacity="4000.0">
+              <td class="price-per-gb hidden">€0,039</td>
+              <td class="price-per-tb">€39,04</td>
+              <td>€156</td>
+              <td>4 TB</td>
+              <td>5 years</td>
+              <td>Internal 3.5"</td>
+              <td>HDD</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B0D1V6F7Y9?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">WD Red Pro 4TB NAS 3.5" Internal Hard Drive - 7200 RPM Class, SATA 6 Gb/s, CMR Recording Technology, 256MB Cache</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="internal_ssd" data-condition="new" data-capacity="960.0">
+              <td class="price-per-gb hidden">€0,050</td>
+              <td class="price-per-tb">€49,90</td>
+              <td>€48</td>
+              <td>960 GB</td>
+              <td>3 years</td>
+              <td>Internal</td>
+              <td>SSD</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B0C2324JYY?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">Lexar NQ100 2.5” SATA III (6Gb/s) 960GB SSD, Up to 550MB/s Read Solid State Drive, Internal SSD for Laptop, Desktop Computer/PC (LNQ100X960G-RNNNG)</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="internal_ssd" data-condition="new" data-capacity="2000.0">
+              <td class="price-per-gb hidden">€0,051</td>
+              <td class="price-per-tb">€51,48</td>
+              <td>€103</td>
+              <td>2 TB</td>
+              <td>3 years</td>
+              <td>Internal</td>
+              <td>SSD</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B087K9L7S7?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">Patriot P210 SATA 3 2TB SSD 2.5 Inch Internal Solid State Drive - P210S2TB25</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="internal_ssd" data-condition="new" data-capacity="960.0">
+              <td class="price-per-gb hidden">€0,055</td>
+              <td class="price-per-tb">€55,12</td>
+              <td>€53</td>
+              <td>960 GB</td>
+              <td>3 years</td>
+              <td>Internal</td>
+              <td>SSD</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B079XC5PVV?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">Kingston A400 SSD Internal Solid State Drive 2.5" SATA Rev 3.0, 960GB - SA400S37/960G</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="m2_nvme" data-condition="new" data-capacity="2000.0">
+              <td class="price-per-gb hidden">€0,059</td>
+              <td class="price-per-tb">€59,50</td>
+              <td>€119</td>
+              <td>2 TB</td>
+              <td>5 years</td>
+              <td>M.2</td>
+              <td>NVMe</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B0B996CJ64?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">Silicon Power 2TB UD90 NVMe 4.0 Gen4 PCIe M.2 SSD R/W up to 5,000/4,800 MB/s (SP02KGBP44UD9005)</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="internal_ssd" data-condition="new" data-capacity="2000.0">
+              <td class="price-per-gb hidden">€0,061</td>
+              <td class="price-per-tb">€61,43</td>
+              <td>€123</td>
+              <td>2 TB</td>
+              <td></td>
+              <td>Internal</td>
+              <td>SSD</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B0B2K3B537?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">KingSpec 2TB 2.5" SATA III 6Gb/s SSD, Read Speed up to 550MB/s, 3D NAND Flash Internal Solid State Drive for Desktop &amp; Laptop</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="m2_nvme" data-condition="new" data-capacity="2000.0">
+              <td class="price-per-gb hidden">€0,064</td>
+              <td class="price-per-tb">€64,39</td>
+              <td>€129</td>
+              <td>2 TB</td>
+              <td>2 years</td>
+              <td>M.2</td>
+              <td>NVMe</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B0BYW8FLKN?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">Crucial P3 Plus SSD 2TB M.2 NVMe PCIe Gen4 Internal SSD, Up to 5000MB/s, Laptop &amp; Desktop (PC) Compatible, Solid State Drive - CT2000P3PSSD801</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="internal_ssd" data-condition="new" data-capacity="4000.0">
+              <td class="price-per-gb hidden">€0,065</td>
+              <td class="price-per-tb">€64,75</td>
+              <td>€259</td>
+              <td>4 TB</td>
+              <td>5 years</td>
+              <td>Internal</td>
+              <td>SSD</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B0CY37V52M?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">Crucial BX500 SATA SSD 4TB, 2.5" Internal SSD, Up to 540MB/s, Laptop and Desktop (PC) Compatible, 3D NAND, Dynamic Write Acceleration, Solid State Drive - CT4000BX500SSD101</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="m2_nvme" data-condition="new" data-capacity="1000.0">
+              <td class="price-per-gb hidden">€0,065</td>
+              <td class="price-per-tb">€64,85</td>
+              <td>€65</td>
+              <td>1 TB</td>
+              <td>5 years</td>
+              <td>M.2</td>
+              <td>NVMe</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B0CNSVG1QB?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">fanxiang M.2 SSD 1TB, NVMe PCIe Gen3.0 x4 2280,Read Speeds Up to 3500MB/s with Cooling Sticker, Internal Solid State Drives for Desktop, Laptop -S501Q</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="internal_ssd" data-condition="new" data-capacity="2000.0">
+              <td class="price-per-gb hidden">€0,066</td>
+              <td class="price-per-tb">€65,76</td>
+              <td>€132</td>
+              <td>2 TB</td>
+              <td>3 years</td>
+              <td>Internal</td>
+              <td>SSD</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B0CCN9QWKT?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">Crucial BX500 SATA SSD 2TB, 2.5" Internal SSD, Up to 540MB/s, Laptop and Desktop (PC) Compatible, 3D NAND, Dynamic Write Acceleration, Solid State Drive - CT2000BX500SSD101</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="m2_nvme" data-condition="new" data-capacity="2000.0">
+              <td class="price-per-gb hidden">€0,066</td>
+              <td class="price-per-tb">€65,91</td>
+              <td>€132</td>
+              <td>2 TB</td>
+              <td>5 years</td>
+              <td>M.2</td>
+              <td>NVMe</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B0DC8RVRBZ?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">Crucial P310 2TB SSD M.2 2280 NVMe PCIe Gen4 Internal Gaming SSD, Up to 7,100MB/s, Laptop &amp; Desktop (PC) Compatible, Solid State Drive - CT2000P310SSD801</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="usb_flash" data-condition="new" data-capacity="256.0" style="display:none">
+              <td class="price-per-gb hidden">€0,067</td>
+              <td class="price-per-tb">€67,03</td>
+              <td>€17</td>
+              <td>256 GB</td>
+              <td>2 years</td>
+              <td>USB</td>
+              <td>Flash</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B0B1JPMF8R?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">Kingston DataTraveler Exodia M USB 3.2 Gen 1 DTXM/256GB- with Moving Cap (Black + Teal)</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="m2_nvme" data-condition="new" data-capacity="1000.0">
+              <td class="price-per-gb hidden">€0,070</td>
+              <td class="price-per-tb">€69,67</td>
+              <td>€70</td>
+              <td>1 TB</td>
+              <td>5 years</td>
+              <td>M.2</td>
+              <td>NVMe</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B0DBR3DZWG?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">Kingston NV3 NVMe PCIe 4.0 Internal SSD 1TB M.2 2280-SNV3S/1000G</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="external_ssd" data-condition="new" data-capacity="4000.0">
+              <td class="price-per-gb hidden">€0,070</td>
+              <td class="price-per-tb">€70,46</td>
+              <td>€282</td>
+              <td>4 TB</td>
+              <td>3 years</td>
+              <td>External</td>
+              <td>SSD</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B0CKL94GKB?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">Samsung Portable SSD T5 EVO, 4 TB, USB 3.2 Gen. 1, 460 MB/s read, 460 MB/s write, External hard drive for Mac, PC, Android, Smart TVs and game consoles, Incl. USB-C cable, MU-PH4T0S/EU</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="m2_nvme" data-condition="new" data-capacity="2000.0">
+              <td class="price-per-gb hidden">€0,070</td>
+              <td class="price-per-tb">€70,50</td>
+              <td>€141</td>
+              <td>2 TB</td>
+              <td>5 years</td>
+              <td>M.2</td>
+              <td>NVMe</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B09QV5KJHV?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">WD_BLACK SN770 2TB NVMe M.2 SSD, M.2 2280 NVMe SSD, Gaming Solid State drive, PCIe Gen4, High Performance Gaming drive, Read speeds up to 5150 MB/s</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="internal_ssd" data-condition="new" data-capacity="480.0">
+              <td class="price-per-gb hidden">€0,071</td>
+              <td class="price-per-tb">€71,08</td>
+              <td>€34</td>
+              <td>480 GB</td>
+              <td>3 years</td>
+              <td>Internal</td>
+              <td>SSD</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B0BJKT4JT2?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">Lexar NQ100 2.5” SATA III (6Gb/s) 480GB SSD, Up to 550MB/s Read Solid State Drive, Internal SSD for Laptop, Desktop Computer/PC (LNQ100X480G-RNNNG), Grey</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="internal_ssd" data-condition="new" data-capacity="500.0">
+              <td class="price-per-gb hidden">€0,074</td>
+              <td class="price-per-tb">€74,24</td>
+              <td>€37</td>
+              <td>500 GB</td>
+              <td>3 years</td>
+              <td>Internal</td>
+              <td>SSD</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B0B9BL9T4H?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">Crucial BX500 3D NAND SATA 2.5-inch SSD Drive, 500 GB Black</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="m2_nvme" data-condition="new" data-capacity="4000.0">
+              <td class="price-per-gb hidden">€0,076</td>
+              <td class="price-per-tb">€75,75</td>
+              <td>€303</td>
+              <td>4 TB</td>
+              <td>5 years</td>
+              <td>M.2</td>
+              <td>NVMe</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B0CB8J9L8D?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">Lexar NM790 4TB SSD, M.2 2280 PCIe Gen4x4 NVMe 1.4 Internal SSD, Up to 7400MB/s Read, Up to 6500MB/s Write, Internal Solid State Drive for PS5, PC, Laptop, Gamers, Professionals (LNM790X004T-RNNNG)</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="m2_nvme" data-condition="new" data-capacity="1000.0">
+              <td class="price-per-gb hidden">€0,086</td>
+              <td class="price-per-tb">€85,73</td>
+              <td>€86</td>
+              <td>1 TB</td>
+              <td>5 years</td>
+              <td>M.2</td>
+              <td>NVMe</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B0DGH2FH7T?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">Samsung 990 EVO Plus, 1TB, PCIe 4.0 x4 / 5.0 x2, NVMe2.0 (up to 7150 MB/s), NVMe M.2 (2280), Internal Solid State Drive (SSD), MZ-V9S1T0BW</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="m2_nvme" data-condition="new" data-capacity="1000.0">
+              <td class="price-per-gb hidden">€0,103</td>
+              <td class="price-per-tb">€103</td>
+              <td>€103</td>
+              <td>1 TB</td>
+              <td>3 years</td>
+              <td>M.2</td>
+              <td>NVMe</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B0BFRDY79K?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">Lexar NM610PRO SSD, M.2 2280 PCIe Gen3x4 NVMe 1.4 SSD 1TB Internal, Up to 3300MB/s Reading, 2600MB/s Write, 3D NAND Flash Drives for Notebook, Desktop, PC</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="internal_ssd" data-condition="new" data-capacity="500.0">
+              <td class="price-per-gb hidden">€0,185</td>
+              <td class="price-per-tb">€185</td>
+              <td>€92</td>
+              <td>500 GB</td>
+              <td>5 years</td>
+              <td>Internal</td>
+              <td>SSD</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B0786QNS9B?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">Crucial MX500 500GB 3D NAND SATA 2.5 Inch Internal SSD - Up to 560MB/s - CT500MX500SSD1</a></td>
+            </tr>
+          
+            <tr class="disk" data-product-type="usb_flash" data-condition="new" data-capacity="32.0" style="display:none">
+              <td class="price-per-gb hidden">€0,331</td>
+              <td class="price-per-tb">€331</td>
+              <td>€11</td>
+              <td>32 GB</td>
+              <td>5 years</td>
+              <td>USB</td>
+              <td>Flash</td>
+              <td>New</td>
+              <td class="name"><a href="https://www.amazon.ie/dp/B077VXV323?tag=diskprices08-21&amp;linkCode=osi&amp;th=1&amp;psc=1">SanDisk 32GB Ultra Fit USB 3.1 Flash Drive Up to 130 MB/s Read</a></td>
+            </tr>
+          
+          </tbody>
+      </table>
+      
+      
+      <p id="disclosures">Last updated at 2025-05-14 21:55:25 UTC. As an Amazon Associate I earn from qualifying purchases. Product prices and availability are accurate as of the date/time indicated and are subject to change. Any price and availability information displayed at the time of purchase will apply to the purchase of the product. CERTAIN CONTENT THAT APPEARS ON THIS SITE COMES FROM AMAZON SERVICES LLC. THIS CONTENT IS PROVIDED 'AS IS' AND IS SUBJECT TO CHANGE OR REMOVAL AT ANY TIME. All other content is Copyright Legitimate Data Company, LLC. All rights reserved.</p>
+
+
+<button title="Enregistrer cette page" style="position: fixed; top: 7rem; left: 9rem; z-index: 9999; padding: 0.75rem 1rem; background-color: rgb(0, 123, 255); color: rgb(255, 255, 255); border: medium; border-radius: 0.25rem; cursor: pointer; font-size: 1rem;">Enregistrer</button></body></html>

@@ -1,0 +1,26 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Contact: mailto:security@thisip.pw
+Expires: 2025-12-31T23:00:00.000Z
+Encryption: https://thisip.pw/.well-known/pgp.txt
+Canary: https://thisip.pw/.well-known/canary.txt
+Preferred-Languages: fr, en
+Canonical: https://thisip.pw/.well-known/security.txt
+
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCAAdFiEEdVsOIT2gqVT2aMaF2RbfV8i5SDoFAmerQ6sACgkQ2RbfV8i5
+SDpZXw/+NjWWApKW74/hqHICLKLY7OWePzMvv2nLyoFnjFeVfY0KHyG1SSSaouo+
+zhfVndOgfBugnwScMsEX+vkkE7YAE4a7S8W1DbpOTQeIa9+KpnplomozP2ciyKrt
+YosmGET9EEw0q2UJgwSxPIugiEFjWlL1KErmTkmMxZZ73stO1EXObMpBzpREn282
+Gx8TFZzsm3uFbnK54m7IIuEX+BVA2KOyqxfcgBNZQ8BZT8SRqJstA/64ndfYcoDy
+F92Jh9B3e0OCK1Olf9CPiGdWGJGCmdqwmb/95EQmil0p/XDf3xsbgrGp2TgH9sQ/
+pZaxFM+JQqCrDe0FPj6pON9vfq/rHUiMKcimWd5frG6v3tEaOmzNfduRP77riZXf
+2wtuBa3K3dMycyz6NLvuNEfZiOKJ1nAzCc4Ca+MFQCHM2Yiptw9xQjzX8Fx/F+0a
+Dzz1ilEw6tREDxhFoURxFhAEn6MpBb9dz2brD3oFk06ERHBIZ2Jpu9rwAVLZJMia
+WqUkeez43rMTOFtJuoZ1branmTcXmOEL6vhRKI08+K/JUzC607eupXJY5GqMEmkU
+RmfIzeh5mYIszCXNVA9qdMBLgOuXdvYQQorQS7uCwIt5BjOWDpzMrGeAjpB7wXBb
+xdzUQ9HB/5y9thEqFDF8/aIDJFaWSi5/of1G0WM87tX+UfZedg0=
+=FsUD
+-----END PGP SIGNATURE-----

@@ -1,0 +1,29 @@
+RewriteEngine On
+RewriteBase /projets/tmdb/
+
+# RewriteRule ^film/([0-9]+)-(.*)$						index.php?type=film&id=$1					[L]
+# RewriteRule ^serie/([0-9]+)-(.*)$						index.php?type=serie&id=$1					[L]
+
+RewriteRule ^(films|series)/genres$						index.php?type=$1&genres					[L,QSA]
+RewriteRule ^genres$									index.php?genres							[L,QSA]
+RewriteRule ^(films|series)/genre/([0-9]+)-(.*)$		index.php?type=$1&genre_id=$2&genre=$3		[L,QSA]
+
+RewriteRule ^(films|series)/origines$					index.php?type=$1&origines					[L,QSA]
+RewriteRule ^(films|series)/origine/([a-z]{2})$			index.php?type=$1&origine=$2				[L,QSA]
+
+RewriteRule ^(films|series)/motcle/([0-9]+)-(.*)$		index.php?type=$1&motcle_id=$2&motcle=$3	[L,QSA]
+
+RewriteRule ^populaires$								index.php?populaires						[L,QSA]
+RewriteRule ^exclus$									index.php?exclus							[L,QSA]
+RewriteRule ^exclus/ygg$								index.php?exclus&ygg						[L,QSA]
+RewriteRule ^exclus/1337x$								index.php?exclus&1337x						[L,QSA]
+RewriteRule ^hash$										index.php?hash								[L,QSA]
+RewriteRule ^seedbox$									index.php?seedbox							[L,QSA]
+RewriteRule ^note-le$									index.php?note-le							[L,QSA]
+
+RewriteRule ^films/populaires$							index.php?films&populaires					[L,QSA]
+RewriteRule ^films/tendances$							index.php?films&tendances					[L,QSA]
+RewriteRule ^films/notes$								index.php?films&notes						[L,QSA]
+RewriteRule ^series/populaires$							index.php?series&populaires					[L,QSA]
+RewriteRule ^series/tendances$							index.php?series&tendances					[L,QSA]
+RewriteRule ^series/notes$								index.php?series&notes						[L,QSA]

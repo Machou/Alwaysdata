@@ -1,0 +1,54 @@
+<div class="table-responsive mt-5">
+		<table class="table table-hover" id="statsJeton">
+			<thead class="table-light">
+				<tr>
+					<th class="pt-1"></th>
+					<th class="text-center pb-2 pt-1"><a href="?7j#graphiquePrixJeton" class="fs-5">7 jours</a></th>
+					<th class="text-center pb-2 pt-1"><a href="?30j#graphiquePrixJeton" class="fs-5">30 jours</a></th>
+					<th class="text-center pb-2 pt-1"><a href="?6m#graphiquePrixJeton" class="fs-5">6 mois</a></th>
+					<th class="text-center pb-2 pt-1"><a href="?1a#graphiquePrixJeton" class="fs-5">1 an</a></th>
+					<th class="text-center pb-2 pt-1"><a href="?2a#graphiquePrixJeton" class="fs-5">2 ans</a></th>
+					<th class="text-center pb-2 pt-1"><a href="?t#graphiquePrixJeton" class="fs-5">Total</a></th>
+				</tr>
+			</thead>
+
+			<tbody class="table-group-divider">
+				<tr>
+					<td>Maximum</td>
+					<td class="text-center" data-bs-toggle="tooltip" data-bs-title="8 novembre 2025">414,770 <i class="fa-solid fa-coins or" data-bs-toggle="tooltip" data-bs-title="Pièces d’or"></i></td>
+					<td class="text-center" data-bs-toggle="tooltip" data-bs-title="31 octobre 2025">426,505 <i class="fa-solid fa-coins or" data-bs-toggle="tooltip" data-bs-title="Pièces d’or"></i></td>
+					<td class="text-center" data-bs-toggle="tooltip" data-bs-title="30 mai 2025">426,505 <i class="fa-solid fa-coins or" data-bs-toggle="tooltip" data-bs-title="Pièces d’or"></i></td>
+					<td class="text-center" data-bs-toggle="tooltip" data-bs-title="2 avril 2025">426,505 <i class="fa-solid fa-coins or" data-bs-toggle="tooltip" data-bs-title="Pièces d’or"></i></td>
+					<td class="text-center" data-bs-toggle="tooltip" data-bs-title="15 septembre 2024">426,505 <i class="fa-solid fa-coins or" data-bs-toggle="tooltip" data-bs-title="Pièces d’or"></i></td>
+					<td class="text-center" data-bs-toggle="tooltip" data-bs-title="2 décembre 2020">426,505 <i class="fa-solid fa-coins or" data-bs-toggle="tooltip" data-bs-title="Pièces d’or"></i></td>
+				</tr>
+				<tr>
+					<td>Minimum</td>
+					<td class="text-center" data-bs-toggle="tooltip" data-bs-title="2 novembre 2025">396,339 <i class="fa-solid fa-coins or" data-bs-toggle="tooltip" data-bs-title="Pièces d’or"></i></td>
+					<td class="text-center" data-bs-toggle="tooltip" data-bs-title="15 octobre 2025">395,759 <i class="fa-solid fa-coins or" data-bs-toggle="tooltip" data-bs-title="Pièces d’or"></i></td>
+					<td class="text-center" data-bs-toggle="tooltip" data-bs-title="15 octobre 2025">329,004 <i class="fa-solid fa-coins or" data-bs-toggle="tooltip" data-bs-title="Pièces d’or"></i></td>
+					<td class="text-center" data-bs-toggle="tooltip" data-bs-title="15 octobre 2025">316,000 <i class="fa-solid fa-coins or" data-bs-toggle="tooltip" data-bs-title="Pièces d’or"></i></td>
+					<td class="text-center" data-bs-toggle="tooltip" data-bs-title="15 octobre 2025">263,577 <i class="fa-solid fa-coins or" data-bs-toggle="tooltip" data-bs-title="Pièces d’or"></i></td>
+					<td class="text-center" data-bs-toggle="tooltip" data-bs-title="15 octobre 2025">153,043 <i class="fa-solid fa-coins or" data-bs-toggle="tooltip" data-bs-title="Pièces d’or"></i></td>
+				</tr>
+				<tr>
+					<td>Écart</td>
+					<td class="text-center">18,431 <i class="fa-solid fa-coins or" data-bs-toggle="tooltip" data-bs-title="Pièces d’or"></i></td>
+					<td class="text-center">30,746 <i class="fa-solid fa-coins or" data-bs-toggle="tooltip" data-bs-title="Pièces d’or"></i></td>
+					<td class="text-center">97,501 <i class="fa-solid fa-coins or" data-bs-toggle="tooltip" data-bs-title="Pièces d’or"></i></td>
+					<td class="text-center">110,505 <i class="fa-solid fa-coins or" data-bs-toggle="tooltip" data-bs-title="Pièces d’or"></i></td>
+					<td class="text-center">162,928 <i class="fa-solid fa-coins or" data-bs-toggle="tooltip" data-bs-title="Pièces d’or"></i></td>
+					<td class="text-center">273,462 <i class="fa-solid fa-coins or" data-bs-toggle="tooltip" data-bs-title="Pièces d’or"></i></td>
+				</tr>
+				<tr>
+					<td>Total</td>
+					<td class="text-center">3,219,681 <i class="fa-solid fa-coins or" data-bs-toggle="tooltip" data-bs-title="Pièces d’or"></i></td>
+					<td class="text-center">12,648,718 <i class="fa-solid fa-coins or" data-bs-toggle="tooltip" data-bs-title="Pièces d’or"></i></td>
+					<td class="text-center">69,712,779 <i class="fa-solid fa-coins or" data-bs-toggle="tooltip" data-bs-title="Pièces d’or"></i></td>
+					<td class="text-center">134,341,031 <i class="fa-solid fa-coins or" data-bs-toggle="tooltip" data-bs-title="Pièces d’or"></i></td>
+					<td class="text-center">261,538,345 <i class="fa-solid fa-coins or" data-bs-toggle="tooltip" data-bs-title="Pièces d’or"></i></td>
+					<td class="text-center">577,321,802 <i class="fa-solid fa-coins or" data-bs-toggle="tooltip" data-bs-title="Pièces d’or"></i></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>

@@ -1,0 +1,43 @@
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} ^www\.hdv\.li$ [NC]
+RewriteRule ^(.*)$ https://hdv.li/$1 [R=301,L]
+
+ErrorDocument 400 /400
+ErrorDocument 401 /401
+ErrorDocument 403 /403
+ErrorDocument 404 /404
+ErrorDocument 405 /405
+ErrorDocument 408 /408
+
+RewriteRule ^([0-9]{3})$													erreur.php?code=$1						[L,QSA]
+
+RewriteRule ^favicon\.(ico|svg)$											assets/img/favicon.svg					[L]
+RewriteRule ^apple-touch-icon-192x192\.png$									assets/img/apple-touch-icon-192x192.png	[L]
+
+# Routes
+
+RewriteRule ^addons$														addons.php								[L,QSA]
+RewriteRule ^admin$															admin.php								[L,QSA]
+RewriteRule ^([0-9]+)-(.*)$													index.php?id_serveur=$1					[L,QSA]
+RewriteRule ^historique-des-prix-du-jeton-wow$								jeton.php								[L,QSA]
+RewriteRule ^api-prix-jeton$												jeton.php?prix							[L,QSA]
+RewriteRule ^cgu$															legal-cgu.php?modal						[L,QSA]
+RewriteRule ^politique-de-confidentialite$									legal-confidentialite.php				[L,QSA]
+RewriteRule ^mascotte/([0-9]+)-(.*)$										mascotte_fiche.php?id_mascotte=$1		[L,QSA]
+RewriteRule ^mascottes$														mascottes.php							[L,QSA]
+RewriteRule ^prix-objet/([0-9]+)-(.*)$										prix_objet.php?id_objet=$1				[L,QSA]
+RewriteRule ^encheres-serveur/([0-9]+)-(.*)$								prix_serveur.php?id_serveur=$1			[L,QSA]
+RewriteRule ^connexion$														profil_connexion.php					[L,QSA]
+RewriteRule ^deconnexion$													profil_deconnexion.php					[L,QSA]
+RewriteRule ^inscription$													profil_inscription.php					[L,QSA]
+RewriteRule ^changer-mot-de-passe$											profil_mot_de_passe_changer.php			[L,QSA]
+RewriteRule ^mot-de-passe-oublie$											profil_mot_de_passe.php					[L,QSA]
+RewriteRule ^valider-inscription$											profil_valider_inscription.php			[L,QSA]
+RewriteRule ^profil-verification$											profil_verification.php					[L,QSA]
+RewriteRule ^profil$														profil.php								[L,QSA]
+RewriteRule ^profil/ajouter-personnage$										profil.php?ajouterPersonnage			[L,QSA]
+RewriteRule ^profil/eu/([0-9A-Za-zÀ-ÿ']{1,25})/([0-9A-Za-zÀ-ÿ']{1,12})/?$	profil.php?region=eu&serveur=$1&nom=$2	[L,QSA]
+RewriteRule ^serveurs$														serveurs.php							[L,QSA]
+RewriteRule ^serveurs/(\w+)$												serveurs.php?langue=$1					[L,QSA]
+RewriteRule ^sitemap.xml$													sitemap.php								[L,QSA]

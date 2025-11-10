@@ -1,0 +1,41 @@
+
+
+# GeoLite2
+
+- GeoLite2-ASN.mmdb
+- GeoLite2-City.mmdb
+- GeoLite2-Country.mmdb
+
+https://www.maxmind.com/en/accounts/211635/geoip/downloads
+
+
+# Bitcoin, Firehol, Tor et StopForumSpam
+
+clear && cd ~/www/thisip/geo/ && \
+rm -f *.netset *.ipset *.csv 2>/dev/null && \
+wget https://iplists.firehol.org/files/bitcoin_nodes.ipset && \
+wget https://iplists.firehol.org/files/firehol_level1.netset && \
+wget https://iplists.firehol.org/files/firehol_level2.netset && \
+wget https://iplists.firehol.org/files/firehol_level3.netset && \
+wget https://iplists.firehol.org/files/firehol_level4.netset && \
+wget https://iplists.firehol.org/files/stopforumspam.ipset && \
+wget https://torstatus.rueckgr.at/ip_list_all.php/Tor_ip_list_ALL.csv && \
+wget https://torstatus.rueckgr.at/ip_list_exit.php/Tor_ip_list_EXIT.csv
+
+
+# ip2location & ip2proxy
+
+- Site
+
+https://lite.ip2location.com/ip2proxy-lite
+https://lite.ip2location.com/ip2location-lite
+
+- Git																	- PHP
+
+https://github.com/ip2location/ip2proxy-php								https://www.ip2location.com/development-libraries/ip2proxy/php
+https://github.com/chrislim2888/IP2Location-PHP-Module					https://www.ip2location.com/development-libraries/ip2location/php
+
+- Téléchargements
+
+https://lite.ip2location.com/database/px11-ip-proxytype-country-region-city-isp-domain-usagetype-asn-lastseen-threat-residential-provider
+https://lite.ip2location.com/database/db11-ip-country-region-city-latitude-longitude-zipcode-timezone

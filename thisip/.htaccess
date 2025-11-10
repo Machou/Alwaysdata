@@ -1,0 +1,44 @@
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} ^www\.thisip\.pw$ [NC]
+RewriteRule ^(.*)$ https://thisip.pw/$1 [R=301,L]
+
+ErrorDocument 400 /400
+ErrorDocument 401 /401
+ErrorDocument 403 /403
+ErrorDocument 404 /404
+ErrorDocument 405 /405
+ErrorDocument 408 /408
+
+RewriteRule ^([0-9]{3})$									erreur.php?code=$1					[L,QSA]
+
+RewriteRule ^favicon\.(ico|png)$							assets/img/favicon.png				[L]
+RewriteRule ^logo\.png$										assets/img/logo.png					[L]
+
+RewriteRule ^api/ip/json/(.+)$								api.php?ip=$1&api&json				[L,QSA]
+RewriteRule ^ip/(.+)$										index.php?ip=$1						[L,QSA]
+
+# Routes
+
+RewriteRule ^adresse-ip$									adresse-ip.php						[L,QSA]
+RewriteRule ^analyse-web$									analyse-web.php						[L,QSA]
+RewriteRule ^analyse-web/([\d\w]{15})$						analyse-web.php?uniqid=$1			[L,QSA]
+RewriteRule ^analyse-web/dom/([\d\w]{15})$					analyse-web-dom.php?uniqid=$1		[L,QSA]
+RewriteRule ^changements$									changements.php						[L,QSA]
+RewriteRule ^calculer-ip-sous-reseau$						cidr.php							[L,QSA]
+RewriteRule ^reputation-courriel$							courriel.php						[L,QSA]
+RewriteRule ^reputation-courriel/(.+)$						courriel.php?courriel=$1			[L,QSA]
+RewriteRule ^dns$											dns.php								[L,QSA]
+RewriteRule ^exif$											exif.php							[L,QSA]
+RewriteRule ^exif-outil$									exif.php?exif-outil					[L,QSA]
+RewriteRule ^exif/telecharger-image-avec-exif$				exif.php?telecharger-avec			[L,QSA]
+RewriteRule ^exif/telecharger-image-sans-exif$				exif.php?telecharger-sans			[L,QSA]
+RewriteRule ^a-propos$										legal-a-propos.php					[L,QSA]
+RewriteRule ^cgu$											legal-cgu.php						[L,QSA]
+RewriteRule ^politique-de-confidentialite$					legal-confidentialite.php			[L,QSA]
+RewriteRule ^rss$											rss.php								[L,QSA]
+RewriteRule ^canary$										securite-canary.php					[L,QSA]
+RewriteRule ^securite$										securite-infos.php					[L,QSA]
+RewriteRule ^pgp$											securite-pgp.php					[L,QSA]
+RewriteRule ^sitemap\.xml$									sitemap.php							[L,QSA]
+RewriteRule ^xkcd$											xkcd.php							[L,QSA]

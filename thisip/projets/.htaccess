@@ -1,0 +1,13 @@
+RewriteEngine On
+RewriteBase /projets/
+
+RewriteRule ^codebarre$				codebarre.php [L]
+RewriteRule ^erreurs$				erreurs.php [L]
+RewriteRule ^hexadecimal$			hexadecimal.php [L]
+RewriteRule ^image$					image.php [L]
+RewriteRule ^kaotic$				kaotic.php [L]
+RewriteRule ^pdf$					pdf.php [L]
+RewriteRule ^trackers$				trackers.php [L]
+RewriteRule ^ultim-zone$			ultim-zone.php [L]
+RewriteRule ^waypoints$				waypoints.php [L]
+RewriteRule ^wow$					wow.php [L]
