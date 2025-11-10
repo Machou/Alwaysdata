@@ -11,6 +11,10 @@ hdv/.vscode/*
 
 thisip/.vscode/*
 thisip/assets/cache/dom/*
+!thisip/assets/cache/dom/index.php
 thisip/assets/cache/ip/*
+!thisip/assets/cache/ip/index.php
 thisip/assets/cache/kaotic/*
+!thisip/assets/cache/kaotic/index.php
 thisip/assets/cache/tmdb/*
+!thisip/assets/cache/tmdb/index.php
